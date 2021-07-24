@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <NavbarComponent />
+      <Route exact path="/" component={Blog} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/places" component={Places} />
