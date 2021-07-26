@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Events.module.css';
+import EventListItem from './../EventListItem/EventListItem';
 
 const Events = () => (
   <div className={styles.Events} data-testid="Events">
-    Events Component
+  <EventListItem></EventListItem>
   </div>
 );
 

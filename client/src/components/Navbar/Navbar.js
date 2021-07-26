@@ -18,6 +18,10 @@ const NavbarComponent = () => (
             <Nav.Link href="Events">Events</Nav.Link>
             <Nav.Link href="Places">Places</Nav.Link>
           </Nav>
+          <Nav className="ml-auto">
+          <Nav.Link href="Login">Log in</Nav.Link>
+
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

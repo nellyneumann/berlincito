@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Events from './Events';
+import Signup from './Signup';
 
-describe('<Events />', () => {
+describe('<Signup />', () => {
   test('it should mount', () => {
-    render(<Events />);
+    render(<Signup />);
     
-    const events = screen.getByTestId('Events');
+    const signup = screen.getByTestId('Signup');
 
-    expect(events).toBeInTheDocument();
+    expect(signup).toBeInTheDocument();
   });
 });

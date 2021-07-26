@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Events from './Events';
+import Signup from './Signup';
 
-storiesOf('Events', module).add('default', () => <Events />);
+storiesOf('Signup', module).add('default', () => <Signup />);
