@@ -10,7 +10,7 @@ const NavbarComponent = () => (
   <div className={styles.Navbar} data-testid="Navbar">
     <Navbar expand="sm">
       <Container>
-        <NavbarBrand>Berlincito</NavbarBrand>
+        <NavbarBrand href="/blog">Berlincito</NavbarBrand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"  />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

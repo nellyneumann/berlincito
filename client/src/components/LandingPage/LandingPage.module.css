@@ -1,0 +1,14 @@
+.LandingPage {
+    height: 70vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vw;
+}
+
+.landingCard {
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    min-height: 50vh;
+}

@@ -4,7 +4,7 @@ import styles from './Places.module.css';
 
 const Places = () => (
   <div className={styles.Places} data-testid="Places">
-    Places Component
+    <p>Coming soon!</p>
   </div>
 );
 
