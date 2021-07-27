@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./LandingPage.module.css";
+import blog from './../../assets/img/blog.png';
+import events from './../../assets/img/events.png';
+import places from './../../assets/img/places.png';
 import { Button, Card } from "react-bootstrap";
 
 const LandingPage = () => (
@@ -8,7 +11,7 @@ const LandingPage = () => (
     <div className="row">
       <div className="col col-sm-4">
         <Card className={styles.landingCard}>
-        <Card.Img variant="top" src="./../../assets/img/berlinSkyline.png" />
+        <Card.Img variant="top" src={blog}/>
           <Card.Body>
             <Card.Title>Blog</Card.Title>
             <Card.Text>
@@ -20,6 +23,7 @@ const LandingPage = () => (
       </div>
       <div className="col col-sm-4">
         <Card className={styles.landingCard}>
+        <Card.Img variant="top" src={events} />
           <Card.Body>
             <Card.Title>Eventos</Card.Title>
             <Card.Text>
@@ -31,6 +35,7 @@ const LandingPage = () => (
       </div>
       <div className="col col-sm-4">
         <Card className={styles.landingCard}>
+        <Card.Img variant="top" src={places} />
           <Card.Body>
             <Card.Title>Lugares</Card.Title>
             <Card.Text>
