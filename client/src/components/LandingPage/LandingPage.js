@@ -12,7 +12,7 @@ const LandingPage = () => (
           <Card.Body>
             <Card.Title>Blog</Card.Title>
             <Card.Text>
-              En este espacio encontrarás información sobre Berlín y su burocracia en español.
+              Toda la información para iniciar tu vida en Berlín y no morir en el intento.
             </Card.Text>
             <Button variant="primary" href="/blog">Acceder</Button>
           </Card.Body>
