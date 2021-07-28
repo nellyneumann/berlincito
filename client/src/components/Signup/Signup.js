@@ -1,73 +1,57 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Signup.module.css';
+import React, { Component } from "react";
+import signup from "./../auth/auth.service";
 
-const Signup = () => (
-  <div className={styles.Signup} data-testid="Signup">
-    <div className="row justify-content-md-center">
-      <div className="col col-md-4 p-4 m-1">
-        <form>
-          <h3>Sign up</h3>
-          <div className="form-group">
-            <label>Your name?</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter your name"
-            />
-          </div>
-          <div className="form-group">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-            />
-          </div>
+export default class SignupComponent extends Component {
+  state = {
+    username: "",
+    password: "",
+    message: "",
+  };
 
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-            />
-          </div>
-          <div className="form-group">
-            <label>Repeat password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Repeat password"
-            />
-          </div>
-            <div className="form-group">
-              <div className="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  className="custom-control-input"
-                  id="customCheck1"
-                />
-                <label className="custom-control-label" htmlFor="customCheck1">
-                  Remember me
-                </label>
-              </div>
-            </div>
-            <button type="submit" className="btn btn-primary btn-block">
-              Submit
-            </button>
-            <p className="forgot-password text-right">
-              Forgot <a href="#">password?</a>
-            </p>
-            <a href="/login">Already a member? Log in here.</a>
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { username, password } = this.state;
+    signup(username, password).then((response) => {
+      console.log(response);
+      this.setState({
+        message: response.message,
+        username: "",
+        password: "",
+      });
+      this.props.getUser(response, true);
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <h2>Signup</h2>
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="username">Username: </label>
+          <input
+            type="text"
+            name="username"
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <label htmlFor="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          />
+          <button type="submit">Signup</button>
+          {this.state.message && <h3>{this.state.message}</h3>}
         </form>
-      </div>
-    </div>
-      </div>
-);
-
-Signup.propTypes = {};
-
-Signup.defaultProps = {};
-
-export default Signup;
+      </>
+    );
+  }
+}

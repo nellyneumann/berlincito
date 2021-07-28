@@ -5,7 +5,7 @@ import ContentContainer from "../ContentContainer/ContentContainer";
 import Sidebar from "../Sidebar/Sidebar";
 import { Container, Col, Row, Button } from "react-bootstrap";
 
-const Blog = () => (
+const Blog = () => {return(
   <div className={styles.Blog} data-testid="Blog">
     <Container className="d-flex justify-content-md-center">
       <Col className="col col-md-8">
@@ -19,7 +19,7 @@ const Blog = () => (
     </Container>
 
   </div>
-);
+)};
 
 Blog.propTypes = {};
 
