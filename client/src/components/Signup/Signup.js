@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import signup from "./../auth/auth.service";
+import authService from "./../auth/auth.service";
 
 export default class SignupComponent extends Component {
   state = {
@@ -18,7 +18,7 @@ export default class SignupComponent extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = this.state;
-    signup(username, password).then((response) => {
+    authService.signup(username, password).then((response) => {
       console.log(response);
       this.setState({
         message: response.message,
