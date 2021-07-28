@@ -10,7 +10,7 @@ class AuthService {
   }
 
   signup = (username, password) => {
-    return axios
+    return this.service
       .post(backend_url + "/api/auth/signup", { username, password })
       .then((response) => {
         return response.data;
@@ -22,7 +22,7 @@ class AuthService {
 
   login = (username, password) => {
     console.log(`Logging in`)
-    return axios
+    return this.service
       .post(backend_url + "/api/auth/login", { username, password })
       .then((response) => {
         console.log(response.data)
@@ -35,7 +35,7 @@ class AuthService {
 
   logout = () => {
     console.log(`Logging out`)
-    return axios
+    return this.service
       .post(backend_url + "/api/auth/logout")
       .then((response) => {
         return response.data;
@@ -47,9 +47,9 @@ class AuthService {
 
   loggedin = () => {
     console.log(`checking login`)
-    return axios
+    return this.service
       .get(backend_url + '/api/auth/loggedin')
-      .then(response => { return response.data})
+      .then(response => { console.log(response.data); return response.data})
   };
 }
 
