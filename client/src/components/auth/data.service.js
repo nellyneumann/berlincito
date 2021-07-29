@@ -34,7 +34,7 @@ class DataService {
 
   getBlogposts = () => {
     return this.service
-      .get(backend_url + "/blog/blogposts")
+      .get(backend_url + "/api/blogposts")
       .then((response) => {
         return response.data;
       })
@@ -45,7 +45,7 @@ class DataService {
 
   postBlogpost = (title, postedBy, date, text, tags) => {
     return this.service
-      .post(backend_url + "/blog/blogpost", { title, postedBy, date, text, tags })
+      .post(backend_url + "/api/blogpost", { title, postedBy, date, text, tags })
       .then((response) => {
         return response.data;
       })
