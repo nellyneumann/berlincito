@@ -37,16 +37,16 @@ export default class Login extends Component {
           <div className="col col-md-4 p-4 m-1">
             <form onSubmit={this.handleFormSubmit}>
               <h3>Log in</h3>
-              <div className="form-group">
+              <div className="row">
                 <label>Name</label>
                 <input type="text" name="username" value={this.state.username} onChange={this.handleChange} />
               </div>
 
-              <div className="form-group">
+              <div className="row">
                 <label>Password</label>
                 <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
               </div>
-              <div className="form-group">
+              <div className="row">
                 <div className="custom-control custom-checkbox">
                   <input
                     type="checkbox"
@@ -61,13 +61,17 @@ export default class Login extends Component {
                   </label>
                 </div>
               </div>
+              <div className="row">
               <button type="submit" className="btn btn-primary btn-block">
                 Submit
               </button>
+              </div>
               <p className="forgot-password text-right">
                 Forgot <a href="#">password?</a>
               </p>
+              <div className="row">
               <a href="/signup">Not a member yet? Sign up here.</a>
+              </div>
             </form>
           </div>
         </div>

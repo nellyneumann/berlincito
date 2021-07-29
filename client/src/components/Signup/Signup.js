@@ -42,10 +42,12 @@ export default class SignupComponent extends Component {
 
   render() {
     return (
-      <div className="container justify-content-center">
-        <div>
+      <div className="row justify-content-center">
+        <div className="col col-md-6 justify-content-center">
           <h2>Signup</h2>
           <form onSubmit={this.handleSubmit}>
+        <div className="row">
+
             <label htmlFor="name">Name: </label>
             <input
               type="text"
@@ -53,6 +55,9 @@ export default class SignupComponent extends Component {
               value={this.state.name}
               onChange={this.handleChange}
             />
+            </div>
+        <div className="row">
+
             <label htmlFor="email">Email: </label>
             <input
               type="email"
@@ -60,6 +65,9 @@ export default class SignupComponent extends Component {
               value={this.state.email}
               onChange={this.handleChange}
             />
+            </div>
+        <div className="row">
+
             <label htmlFor="password">Password: </label>
             <input
               type="password"
@@ -67,8 +75,11 @@ export default class SignupComponent extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            <button type="submit">Signup</button>
+            </div>
+            <div className="row">
+            <button className="btn btn-primary" type="submit">Signup</button>
             {this.state.message && <h3>{this.state.message}</h3>}
+            </div>
           </form>
         </div>
       </div>
