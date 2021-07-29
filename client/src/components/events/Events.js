@@ -5,12 +5,13 @@ import EventListItem from "./../EventListItem/EventListItem";
 import axios from "axios";
 import AddEvent from "../AddEvent/AddEvent";
 import { Component } from "react";
+import dataService from "../auth/data.service";
 
 class Events extends Component {
   state = { listOfEvents: [] };
 
   getAllEvents = () => {
-    axios.get(`http://localhost:5005/api/events`).then((responseFromApi) => {
+    dataService.get().then((responseFromApi) => {
       this.setState({
         listOfEvents: responseFromApi.data,
       });

@@ -1,5 +1,5 @@
 import axios from "axios";
-const backend_url = "http://localhost:5005";
+const backend_url = process.env.BACKEND_URL;
 
 class DataService {
   constructor() {
@@ -12,6 +12,17 @@ class DataService {
   postEvent = (title, organizer, description, date, address) => {
     return this.service
       .post(backend_url + "/api/event", { title, description, organizer, date, address })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => {
+        return err.response.data;
+      });
+  };
+
+  getEvents = () => {
+    return this.service
+      .get(backend_url + "/api/events")
       .then((response) => {
         return response.data;
       })

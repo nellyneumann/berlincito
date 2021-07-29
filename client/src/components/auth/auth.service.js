@@ -1,5 +1,5 @@
 import axios from "axios";
-const backend_url = "http://localhost:5005";
+const backend_url = process.env.BACKEND_URL;
 
 class AuthService {
   constructor() {
