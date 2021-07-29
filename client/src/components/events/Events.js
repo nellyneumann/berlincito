@@ -1,8 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./Events.module.css";
-import EventListItem from "./../EventListItem/EventListItem";
-import axios from "axios";
 import AddEvent from "../AddEvent/AddEvent";
 import { Component } from "react";
 import dataService from "../auth/data.service";
