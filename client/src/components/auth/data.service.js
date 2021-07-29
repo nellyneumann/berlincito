@@ -31,6 +31,17 @@ class DataService {
         return err.response.data;
       });
   };
+
+  getEvents = () => {
+    return this.service
+      .get(backend_url + "/api/blogposts")
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => {
+        return err.response.data;
+      });
+  };
 }
 
   
