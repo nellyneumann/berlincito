@@ -2,6 +2,8 @@
 // https://www.npmjs.com/package/dotenv
 require("dotenv/config");
 
+
+
 // Packages used for authentication (Session & Passport)
 const session = require('express-session');
 const passport = require('passport');
@@ -39,10 +41,18 @@ require("./config")(app);
 
 
 const authRouter = require('./routes/auth.routes');
-app.use('/api', authRouter); 
+app.use('/api/auth', authRouter); 
+
+const eventRouter = require('./routes/events.routes');
+app.use('/api', eventRouter);
  
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
+
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;

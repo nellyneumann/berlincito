@@ -4,7 +4,7 @@ import styles from "./Sidebar.module.css";
 
 const Sidebar = () => (
   <div className={styles.Sidebar} data-testid="Sidebar">
-    <h5>Read our previous stories</h5>
+    <h5>También te puede interesar</h5>
     <ol className="justify-content-md-start">
       <li>
         <a href="#">Berlincito</a>

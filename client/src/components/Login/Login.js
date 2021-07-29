@@ -10,13 +10,15 @@ export default class Login extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { username, password, message } = this.state;
+    const { username, password } = this.state;
+    console.log(username)
+    console.log(password)
 
     authService
       .login(username, password)
       .then(response => {
         console.log(response)
-        this.setState({ username: '', password: '' });
+        this.setState({ name: '', password: '' });
         this.props.getUser(response, true);
       })
       .catch((error) => console.log(error));
@@ -35,7 +37,7 @@ export default class Login extends Component {
             <form onSubmit={this.handleFormSubmit}>
               <h3>Log in</h3>
               <div className="form-group">
-                <label>Email address</label>
+                <label>Name</label>
                 <input type="text" name="username" value={this.state.username} onChange={this.handleChange} />
               </div>
 

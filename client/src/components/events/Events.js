@@ -2,22 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Events.module.css";
 import EventListItem from "./../EventListItem/EventListItem";
-import axios from 'axios';
-import AddEvent from '../AddEvent/AddEvent';
+import axios from "axios";
+import AddEvent from "../AddEvent/AddEvent";
 import { Component } from "react";
 
 class Events extends Component {
-  state = { listOfEvents: [] }
+  state = { listOfEvents: [] };
 
-  getAllEvents = () =>{
-    axios.get(`http://localhost:5005/api/events`)
-    .then(responseFromApi => {
+  getAllEvents = () => {
+    axios.get(`http://localhost:5005/api/events`).then((responseFromApi) => {
       this.setState({
-        listOfEvents: responseFromApi.data
+        listOfEvents: responseFromApi.data,
       });
     });
-  }
- 
+  };
+
   componentDidMount() {
     this.getAllEvents();
   }
@@ -25,19 +24,25 @@ class Events extends Component {
   render() {
     return (
       <div className={styles.Events} data-testid="Events">
-       <div style={{width: '60%', float:"left"}}>
-          { this.state.listOfEvents.map( event => {
-            return (
-              <div key={event._id}>
-                  <h3>{event.title}</h3>
-                  <p>{event.organizer}</p>
-                <p style={{maxWidth: '400px'}} >{event.description} </p>
-              </div>
-            )})
-          }
+        <div className="container">
+          <div className="row row-md">
+            {this.state.listOfEvents.map((event) => {
+              return (
+                <div key={event._id} className={styles.eventContainer}>
+                  <h3 className={styles.eventTitle}>{event.title}</h3>
+                  <p>Organizado por: {event.organizer}</p>
+                  <p>{event.description}</p>
+                  <p>Donde: {event.address}</p>
+                  <p>Cuando: {event.date}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div style={{width: '40%', float:"right"}}>
-            <AddEvent getData={() => this.getAllEvents()}/> {/* <== !!! */}
+        <div className="row row-md-6 justify-content-center">
+          <div className="col col-md-4">
+            <AddEvent getData={() => this.getAllEvents()} /> {/* <== !!! */}
+          </div>
         </div>
       </div>
     );

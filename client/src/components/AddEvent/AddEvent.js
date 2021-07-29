@@ -10,7 +10,7 @@ export default class AddEvent extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     const { title, organizer, description, address, date } = this.state;
-    DataService.postEvent(title, description, organizer, date, address)
+    DataService.postEvent(title, organizer, description, date, address)
       .then((response) => {
         console.log(response);
       })
@@ -26,11 +26,12 @@ export default class AddEvent extends Component {
 
   render() {
     return (
-      <div className={styles.AddEvent} data-testid="AddEvent">
+      <div className={styles.addEvent} data-testid="AddEvent">
+      <div className="col">
         <form onSubmit={this.handleFormSubmit}>
-          <h3>Add a new event</h3>
-          <div className="form-group">
-            <label>Title</label>
+          <h3 className={styles.addEvent}>Agregar Evento</h3>
+          <div className="row">
+            <label>Titulo</label>
             <input
               type="text"
               name="title"
@@ -39,8 +40,8 @@ export default class AddEvent extends Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Organizer</label>
+          <div className="row">
+            <label>Organizador</label>
             <input
               type="text"
               name="organizer"
@@ -49,8 +50,8 @@ export default class AddEvent extends Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Description</label>
+          <div className="row">
+            <label>Descripción</label>
             <input
               type="text"
               name="description"
@@ -59,8 +60,8 @@ export default class AddEvent extends Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Address</label>
+          <div className="row">
+            <label>Dirección</label>
             <input
               type="text"
               name="address"
@@ -69,8 +70,8 @@ export default class AddEvent extends Component {
             />
           </div>
 
-          <div className="form-group">
-            <label>Date</label>
+          <div className="row">
+            <label>Fecha</label>
             <input
               type="text"
               name="date"
@@ -80,9 +81,10 @@ export default class AddEvent extends Component {
           </div>
 
           <button type="submit" className="btn btn-primary btn-block">
-            Submit Event
+            Agregar Evento
           </button>
         </form>
+      </div>
       </div>
     );
   }

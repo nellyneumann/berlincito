@@ -1,1 +1,12 @@
 .Events {}
+
+.eventContainer {
+    max-width: 300px;
+    max-height: 600px;
+    background-color: #f4dcb3;
+    margin: 10px 10px 30px 10px;
+}
+
+.eventTitle{
+    color:teal;
+}

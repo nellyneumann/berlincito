@@ -9,9 +9,9 @@ class AuthService {
     });
   }
 
-  signup = (username, password) => {
+  signup = (username, password, email) => {
     return this.service
-      .post(backend_url + "/api/auth/signup", { username, password })
+      .post(backend_url + "/api/auth/signup", { username, password, email })
       .then((response) => {
         return response.data;
       })

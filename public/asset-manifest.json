@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.14cc61d0.chunk.css",
+    "main.js": "/static/js/main.4287c08e.chunk.js",
+    "main.js.map": "/static/js/main.4287c08e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e9a3cb33.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e9a3cb33.js.map",
+    "static/css/2.4be38407.chunk.css": "/static/css/2.4be38407.chunk.css",
+    "static/js/2.dd050565.chunk.js": "/static/js/2.dd050565.chunk.js",
+    "static/js/2.dd050565.chunk.js.map": "/static/js/2.dd050565.chunk.js.map",
+    "static/js/3.2bb315dd.chunk.js": "/static/js/3.2bb315dd.chunk.js",
+    "static/js/3.2bb315dd.chunk.js.map": "/static/js/3.2bb315dd.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.14cc61d0.chunk.css.map": "/static/css/main.14cc61d0.chunk.css.map",
+    "static/js/2.dd050565.chunk.js.LICENSE.txt": "/static/js/2.dd050565.chunk.js.LICENSE.txt",
+    "static/media/berlinSkyline.8220dce3.png": "/static/media/berlinSkyline.8220dce3.png",
+    "static/media/blog.22a1353e.png": "/static/media/blog.22a1353e.png",
+    "static/media/events.e47040da.png": "/static/media/events.e47040da.png",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/places.0cdc577d.png": "/static/media/places.0cdc577d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9a3cb33.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.dd050565.chunk.js",
+    "static/css/main.14cc61d0.chunk.css",
+    "static/js/main.4287c08e.chunk.js"
+  ]
+}

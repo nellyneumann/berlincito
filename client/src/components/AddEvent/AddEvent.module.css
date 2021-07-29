@@ -1,1 +1,7 @@
-.AddEvent {}
+.addEvent {
+    color:teal;
+}
+
+.btn  {
+    padding-top: 10px;
+}
