@@ -20,7 +20,7 @@ class AuthService {
       .post(backend_url + "/api/auth/login", { username, password })
       .then((response) => {
         console.log(response)
-        return response;
+        return response.data;
       })
       .catch((err) => {
         console.log(err);
