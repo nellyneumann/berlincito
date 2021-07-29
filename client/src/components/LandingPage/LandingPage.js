@@ -9,7 +9,7 @@ import { Button, Card } from "react-bootstrap";
 const LandingPage = () => (
   <div className={styles.LandingPage} data-testid="LandingPage">
     <div className="row">
-      <div className="col col-sm-4">
+      <div className="col bg-secondary col-sm-4">
         <Card className={styles.landingCard}>
         <Card.Img variant="top" src={blog}/>
           <Card.Body>
@@ -21,7 +21,7 @@ const LandingPage = () => (
           </Card.Body>
         </Card>
       </div>
-      <div className="col col-sm-4">
+      <div className="col bg-secondary col-sm-4">
         <Card className={styles.landingCard}>
         <Card.Img variant="top" src={events} />
           <Card.Body>
@@ -33,7 +33,7 @@ const LandingPage = () => (
           </Card.Body>
         </Card>
       </div>
-      <div className="col col-sm-4">
+      <div className="col bg-secondary col-sm-4">
         <Card className={styles.landingCard}>
         <Card.Img variant="top" src={places} />
           <Card.Body>

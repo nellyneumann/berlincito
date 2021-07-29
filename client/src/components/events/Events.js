@@ -13,7 +13,7 @@ class Events extends Component {
     axios.get(`http://localhost:5005/api/events`)
     .then(responseFromApi => {
       this.setState({
-        listOfProjects: responseFromApi.data
+        listOfEvents: responseFromApi.data
       });
     });
   }
