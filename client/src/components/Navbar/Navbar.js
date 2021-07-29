@@ -30,7 +30,7 @@ export default class NavbarComponent extends Component {
                   <Nav.Link href="Places">Lugares</Nav.Link>
                 </Nav>
                 <Nav className="ml-auto">
-                {userIsLoggedIn && <li>Welcome, {userData.name}</li>}
+                {userIsLoggedIn && <li>Welcome, {userData.username}</li>}
                 <button onClick={() => this.logoutUser()}>Logout</button>
 
                 </Nav>
