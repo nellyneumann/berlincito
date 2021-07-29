@@ -4,8 +4,6 @@ import styles from './AddBlogpost.module.css';
 import DataService from "../auth/data.service";
 import { Component } from "react";
 
-
-
 export default class AddBlogpost extends Component {
   state = { title: "", postedBy: "", date: "", text: "", tags: [String] };
 
