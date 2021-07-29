@@ -18,16 +18,20 @@ const ContentContainer = () => (
                 className="badge bg-secondary text-decoration-none link-light"
                 href="#!"
               >
-                Housekeeping
+                Anmeldung
               </a>
               <a
                 className="badge bg-secondary text-decoration-none link-light"
                 href="#!"
               >
-                English
+                Español
               </a>
             </header>
             <p>
+              Uno de los tramites mas importantes a tu llegada a Berlín es el Anmeldung. 
+              El Anmeldung es el registro que haces en el ayuntamiento de la ciudad. 
+              La dirección proporcionada es la dirección que usaran todas las entidades oficiales para localizarte en caso de ser necesario.
+              
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
