@@ -8,7 +8,6 @@ class Events extends Component {
   state = { listOfEvents: [] };
 
   getAllEvents = () => {
-    
     dataService.getEvents().then((responseFromApi) => {
       console.log (responseFromApi)
       if (responseFromApi !== undefined) {
@@ -24,9 +23,7 @@ class Events extends Component {
     .catch(err => {
       console.log("an error happened");
       console.log(err);
-      
     })
-  
   };
 
   componentDidMount() {

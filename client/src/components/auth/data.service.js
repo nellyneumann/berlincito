@@ -32,9 +32,20 @@ class DataService {
       });
   };
 
-  getEvents = () => {
+  getBlogposts = () => {
     return this.service
       .get(backend_url + "/api/blogposts")
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => {
+        return err.response.data;
+      });
+  };
+
+  postBlogpost = (title, postedBy, date, text, tags) => {
+    return this.service
+      .post(backend_url + "/api/blogpost", { title, postedBy, date, text, tags })
       .then((response) => {
         return response.data;
       })

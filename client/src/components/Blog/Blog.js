@@ -4,6 +4,7 @@ import styles from "./Blog.module.css";
 import ContentContainer from "../ContentContainer/ContentContainer";
 import Sidebar from "../Sidebar/Sidebar";
 import { Container, Col, Row, Button } from "react-bootstrap";
+import AddBlogpost from "../AddBlogpost/AddBlogpost";
 
 const Blog = () => {return(
   <div className={styles.Blog} data-testid="Blog">
@@ -11,6 +12,9 @@ const Blog = () => {return(
       <Col className="col col-md-8">
         <Row>
           <ContentContainer></ContentContainer>
+        </Row>
+        <Row>
+        <AddBlogpost></AddBlogpost>
         </Row>
       </Col>
       <Col className="col col-md-4 offset-8 position-fixed">
