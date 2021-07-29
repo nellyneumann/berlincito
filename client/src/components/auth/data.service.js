@@ -1,8 +1,9 @@
 import axios from "axios";
-const backend_url = process.env.BACKEND_URL;
+const backend_url = process.env.REACT_APP_BACKEND_URL;
 
 class DataService {
   constructor() {
+      console.log(process.env.REACT_APP_BACKEND_URL);
     this.service = axios.create({
       baseURL: backend_url,
       withCredentials: true,

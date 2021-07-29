@@ -8,11 +8,25 @@ class Events extends Component {
   state = { listOfEvents: [] };
 
   getAllEvents = () => {
-    dataService.get().then((responseFromApi) => {
+    
+    dataService.getEvents().then((responseFromApi) => {
+      console.log (responseFromApi)
+      if (responseFromApi !== undefined) {
+
+      
       this.setState({
-        listOfEvents: responseFromApi.data,
+        listOfEvents: responseFromApi,
       });
-    });
+    } else {
+      console.log(responseFromApi)
+    }
+    }) 
+    .catch(err => {
+      console.log("an error happened");
+      console.log(err);
+      
+    })
+  
   };
 
   componentDidMount() {
@@ -39,7 +53,7 @@ class Events extends Component {
         </div>
         <div className="row row-md-6 justify-content-center">
           <div className="col col-md-4">
-            <AddEvent getData={() => this.getAllEvents()} /> {/* <== !!! */}
+            <AddEvent getData={() => this.getAllEvents()} />
           </div>
         </div>
       </div>
