@@ -8,22 +8,22 @@ class Events extends Component {
   state = { listOfEvents: [] };
 
   getAllEvents = () => {
-    dataService.getEvents().then((responseFromApi) => {
-      console.log (responseFromApi)
-      if (responseFromApi !== undefined) {
-
-      
-      this.setState({
-        listOfEvents: responseFromApi,
+    dataService
+      .getEvents()
+      .then((responseFromApi) => {
+        console.log(responseFromApi);
+        if (responseFromApi !== undefined) {
+          this.setState({
+            listOfEvents: responseFromApi,
+          });
+        } else {
+          console.log(responseFromApi);
+        }
+      })
+      .catch((err) => {
+        console.log("an error happened");
+        console.log(err);
       });
-    } else {
-      console.log(responseFromApi)
-    }
-    }) 
-    .catch(err => {
-      console.log("an error happened");
-      console.log(err);
-    })
   };
 
   componentDidMount() {
