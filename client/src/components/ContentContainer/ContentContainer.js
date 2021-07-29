@@ -7,7 +7,7 @@ import { Component } from "react";
 
 
 export default class ContentContainer extends Component {
-  state = { listOfBLogposts: [] };
+  state = { listOfBlogposts: [] };
 
   getAllBlogposts = () => {
     dataService
@@ -16,7 +16,7 @@ export default class ContentContainer extends Component {
         console.log(responseFromApi);
         if (responseFromApi !== undefined) {
           this.setState({
-            listOfBLogposts: responseFromApi,
+            listOfBlogposts: responseFromApi,
           });
         } else {
           console.log(responseFromApi);
@@ -38,7 +38,7 @@ export default class ContentContainer extends Component {
           <div className="row">
             <div className="col-lg-8">
               <article>
-              {this.state.listOfBLogposts.map((blogpost) => {
+              {this.state.listOfBlogposts.map((blogpost) => {
               return (
                 <div key={blogpost._id} className={styles.ContentContainer}>
                   <h3>{blogpost.title}</h3>
