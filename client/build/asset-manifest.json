@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.761d3488.chunk.css",
-    "main.js": "/static/js/main.bfe294ab.chunk.js",
-    "main.js.map": "/static/js/main.bfe294ab.chunk.js.map",
+    "main.css": "/static/css/main.cadd6f18.chunk.css",
+    "main.js": "/static/js/main.2c3f62b9.chunk.js",
+    "main.js.map": "/static/js/main.2c3f62b9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c41a2bdb.js",
     "runtime-main.js.map": "/static/js/runtime-main.c41a2bdb.js.map",
     "static/css/2.4be38407.chunk.css": "/static/css/2.4be38407.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.75abb256.chunk.js.map": "/static/js/3.75abb256.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.4be38407.chunk.css.map": "/static/css/2.4be38407.chunk.css.map",
-    "static/css/main.761d3488.chunk.css.map": "/static/css/main.761d3488.chunk.css.map",
+    "static/css/main.cadd6f18.chunk.css.map": "/static/css/main.cadd6f18.chunk.css.map",
     "static/js/2.baba3cba.chunk.js.LICENSE.txt": "/static/js/2.baba3cba.chunk.js.LICENSE.txt",
     "static/media/berlinSkyline.8220dce3.png": "/static/media/berlinSkyline.8220dce3.png",
     "static/media/blog.22a1353e.png": "/static/media/blog.22a1353e.png",
@@ -24,7 +24,7 @@
     "static/js/runtime-main.c41a2bdb.js",
     "static/css/2.4be38407.chunk.css",
     "static/js/2.baba3cba.chunk.js",
-    "static/css/main.761d3488.chunk.css",
-    "static/js/main.bfe294ab.chunk.js"
+    "static/css/main.cadd6f18.chunk.css",
+    "static/js/main.2c3f62b9.chunk.js"
   ]
 }

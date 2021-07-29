@@ -20,6 +20,7 @@ export default class Login extends Component {
         console.log(response)
         this.setState({ name: '', password: '' });
         this.props.getUser(response, true);
+        this.props.history.push('/');
       })
       .catch((error) => console.log(error));
   };

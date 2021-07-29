@@ -12,12 +12,6 @@ class AuthService {
   signup = (username, password, email) => {
     return this.service
       .post(backend_url + "/api/auth/signup", { username, password, email })
-      .then((response) => {
-        return response.data;
-      })
-      .catch((err) => {
-        return err.response.data;
-      });
   };
 
   login = (username, password) => {
@@ -25,10 +19,11 @@ class AuthService {
     return this.service
       .post(backend_url + "/api/auth/login", { username, password })
       .then((response) => {
-        console.log(response.data)
-        return response.data;
+        console.log(response)
+        return response;
       })
       .catch((err) => {
+        console.log(err);
         return err;
       });
   };
